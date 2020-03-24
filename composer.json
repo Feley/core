@@ -1,0 +1,32 @@
+{
+    "name": "netesy/voom",
+    "description": "PHP Framework For the fast",
+    "type": "framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emmanuel Olisah",
+            "email": "netesy1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"php": "^7.2",
+		"eftec/bladeone": "^3.37",
+		"symfony/http-foundation": "*",
+        "vlucas/phpdotenv": "^4.1@dev",
+        "filp/whoops": "^2.6@dev",
+        "league/route": "dev-master",
+        "laminas/laminas-diactoros": "^2.1@dev",
+        "laminas/laminas-httphandlerrunner": "^1.1@dev",
+        "league/flysystem": "2.x-dev",
+        "league/event": "^2.2@dev",
+        "league/container": "dev-master",
+        "illuminate/database": "7.x-dev"
+	},    
+	"autoload": {
+        "psr-4": {
+            "Rocket\\": "Rocket/"
+        }
+    }
+}
