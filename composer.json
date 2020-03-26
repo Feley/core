@@ -16,6 +16,7 @@
 		"symfony/http-foundation": "*",
         "vlucas/phpdotenv": "^4.1@dev",
         "filp/whoops": "^2.6@dev",
+        "pecee/simple-router": "^4.2",
         "league/route": "dev-master",
         "laminas/laminas-diactoros": "^2.1@dev",
         "laminas/laminas-httphandlerrunner": "^1.1@dev",
