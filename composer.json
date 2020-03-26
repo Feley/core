@@ -1,7 +1,7 @@
 {
     "name": "netesy/voom",
     "description": "PHP Framework For the fast",
-    "type": "framework",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
