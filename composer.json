@@ -23,7 +23,10 @@
         "league/flysystem": "2.x-dev",
         "league/event": "^2.2@dev",
         "league/container": "dev-master",
-        "illuminate/database": "7.x-dev"
+        "illuminate/database": "7.x-dev",
+        "nette/mail": "^3.1@dev",
+        "nette/robot-loader": "^3.2@dev",
+        "nette/php-generator": "^3.3@dev"
 	},    
 	"autoload": {
         "psr-4": {
