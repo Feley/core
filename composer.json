@@ -1,6 +1,6 @@
 {
     "name": "netesy/voom",
-    "description": "PHP Framework For the fast",
+    "description": "The Voom Framework",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -17,8 +17,6 @@
         "vlucas/phpdotenv": "^4.1@dev",
         "filp/whoops": "^2.6@dev",
         "pecee/simple-router": "^4.2",
-        "laminas/laminas-diactoros": "^2.1@dev",
-        "laminas/laminas-httphandlerrunner": "^1.1@dev",
         "league/flysystem": "2.x-dev",
         "league/event": "^2.2@dev",
         "league/container": "dev-master",
@@ -28,6 +26,9 @@
         "nette/php-generator": "^3.3@dev"
 	},    
 	"autoload": {
+		"files": [
+			"Rocket/Support/helper.php"
+		],
         "psr-4": {
             "Rocket\\": "Rocket/"
         }

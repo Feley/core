@@ -11,6 +11,7 @@ Class View extends BladeOne
 		$views = _DIR_./views';
 		$cache = _DIR_./cache';
 		$blade = new BladeOne($views, $cache, BladeOne::MODE_AUTO);
+        $blade->setBaseUrl(getenv('APP_URL'));
 		return $blade->run($view, $array);
 	}
 }
