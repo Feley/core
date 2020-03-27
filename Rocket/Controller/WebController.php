@@ -7,15 +7,19 @@ use eftec\bladeone\BladeOne;
 
 Class WebController 
 {
+    public $view;
+    public $cache; 
     public function view($view, $variables = [])
     {
-        $dotenv = Dotenv\Dotenv::createMutable(__DIR__);
+        $dotenv = \Dotenv\Dotenv::createMutable(getenv('BASE_PATH'));
         $dotenv->load();
-        $views = __DIR__.getenv('BLADE_VIEW');;
-        $cache = __DIR__.getenv('BLADE_CACHE');;
+        $views = getenv('BASE_PATH').getenv('BLADE_VIEW');
+        $cache = getenv('BASE_PATH').getenv('BLADE_CACHE');
         $blade = new BladeOne($views, $cache, BladeOne::MODE_FAST);
         $blade->setIsCompiled(false); 
         $content = $blade->run($view, $variables);
+        //$content = var_dump($views);
+        var_dump($content);
         return Response::create($content);
     }
 }
