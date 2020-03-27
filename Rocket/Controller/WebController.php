@@ -18,9 +18,7 @@ Class WebController
         $blade = new BladeOne($views, $cache, BladeOne::MODE_FAST);
         $blade->setIsCompiled(false); 
         $content = $blade->run($view, $variables);
-        //$content = var_dump($views);
-        var_dump($content);
-        return Response::create($content);
+        echo $content;
     }
 }
 ?>
