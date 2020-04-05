@@ -19,7 +19,7 @@
         "pecee/simple-router": "^4.2",
         "league/flysystem": "2.x-dev",
         "league/event": "^2.2@dev",
-		"duncan3dc/console": "dev-master",
+		"netesy/console": "dev-master",
         "league/container": "dev-master",
         "illuminate/database": "7.x-dev",
         "nette/mail": "^3.1@dev",
