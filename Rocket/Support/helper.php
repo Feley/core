@@ -15,13 +15,14 @@ if(!function_exists('view')){
 		$langPath = getenv('BASE_PATH').getenv('BLADE_LANG');
 		$log = getenv('BASE_PATH').'/log.txt';
 		//view is called
-        $blade = new View($views, $cache, BladeOne::MODE_FAST);
+        $blade = new View($views, $cache, View::MODE_FAST);
         $blade->setBaseUrl(getenv('APP_URL'));
         $blade->setIsCompiled(false); 
 		//language supports
 
 		$blade->missingLog=$log; // if a traduction is missing the it will be saved here.
-		$lang='en'; // try es,jp or fr
+		//! change me to work programmatically.
+		$lang='tiv'; // try es,jp or fr //chan
 		include $langPath.$lang.'.php';
 		
         $content = $blade->run($view, $variables);
