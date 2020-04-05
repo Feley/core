@@ -8,21 +8,10 @@ use eftec\bladeone\BladeOneLang;
 /**
  * The Language Class for Translation In the Template
  */
-class Lang extends BladeOne
+class Lang extends BladeOneLang
 {
-    use BladeOneLang;
-    /**
-     * To Use This Class Just
-     * use Rocket\View\Lang;
-     * Lang::$dictionary=array(
-     *      'Hat'=>'Sombrero',
-     *      'Cat'=>'Gato',
-     *      'Cats'=>'Gatos', // plural
-     *      '%s is a nice cat'=>'%s es un buen gato'
-     * );
-     */
 }
-    $dotenv = \Dotenv\Dotenv::createMutable(getenv('BASE_PATH'));
+/*     $dotenv = \Dotenv\Dotenv::createMutable(getenv('BASE_PATH'));
     $dotenv->load();
     $views = getenv('BASE_PATH').getenv('BLADE_VIEW');
     $cache = getenv('BASE_PATH').getenv('BLADE_CACHE');
@@ -33,5 +22,6 @@ class Lang extends BladeOne
     $blade->setIsCompiled(false); 
     $blade->missingLog=$log; // if a traduction is missing the it will be saved here.
     $lang='jp'; // try es,jp or fr
-    include $langPath.$lang.'.php';
+    include $langPath.$lang.'.php'; */
+	
 ?>

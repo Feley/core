@@ -1,5 +1,5 @@
 <?php
-use eftec\bladeone\BladeOne;
+use Rocket\View\View;
 use Rocket\Routing\Router as Router;
 use Pecee\Http\Url;
 use Pecee\Http\Response;
@@ -12,11 +12,20 @@ if(!function_exists('view')){
         $dotenv->load();
         $views = getenv('BASE_PATH').getenv('BLADE_VIEW');
         $cache = getenv('BASE_PATH').getenv('BLADE_CACHE');
-        $blade = new BladeOne($views, $cache, BladeOne::MODE_FAST);
+		$langPath = getenv('BASE_PATH').getenv('BLADE_LANG');
+		$log = getenv('BASE_PATH').'/log.txt';
+		//view is called
+        $blade = new View($views, $cache, BladeOne::MODE_FAST);
         $blade->setBaseUrl(getenv('APP_URL'));
         $blade->setIsCompiled(false); 
+		//language supports
+
+		$blade->missingLog=$log; // if a traduction is missing the it will be saved here.
+		$lang='en'; // try es,jp or fr
+		include $langPath.$lang.'.php';
+		
         $content = $blade->run($view, $variables);
-        echo $content;
+		echo $content;
     }
 }
 
