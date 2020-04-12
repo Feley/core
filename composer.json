@@ -27,6 +27,7 @@
         "illuminate/database": "7.x-dev",
         "nette/mail": "^3.1@dev",
         "nette/robot-loader": "^3.2@dev",
+        "wixel/gump": "^1",
         "nette/php-generator": "^3.3@dev"
 	},    
 	"autoload": {

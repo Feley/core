@@ -48,8 +48,8 @@ if(!function_exists('view')){
  * @return \Pecee\Http\Url
  * @throws \InvalidArgumentException
  */
-if(!function_exists('url')){
-function url(?string $name = null, $parameters = null, ?array $getParams = null): Url
+if(!function_exists('route')){
+function route(?string $name = null, $parameters = null, ?array $getParams = null): Url
 {
     return Router::getUrl($name, $parameters, $getParams);
 }
