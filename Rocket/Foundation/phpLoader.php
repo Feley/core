@@ -73,9 +73,9 @@ class PhpLoader
      */
     public function register(bool $prepend = false): self
     {
-        $this->loadCache();
-        spl_autoload_register([$this, 'tryLoad'], true, $prepend);
-        return $this;
+        foreach (glob($path.$this->directory."/*.php") as $file) {
+            require_once($file);
+        }
     }
 
 
@@ -126,13 +126,6 @@ class PhpLoader
             $paths = $paths[0];
         }
         $this->scanPaths = array_merge($this->scanPaths, $paths);
-        return $this;
-    }
-
-
-    public function reportParseErrors(bool $on = true): self
-    {
-        $this->reportParseErrors = $on;
         return $this;
     }
 
