@@ -2,7 +2,7 @@
 
 namespace Rocket\Database;
 
-use Illumninate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Database\Capsule\Model as Eloquent;
 
 Class Model extends Eloquent
 {
