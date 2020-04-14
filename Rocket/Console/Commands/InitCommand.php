@@ -3,6 +3,8 @@
 namespace Rocket\Console\Commands;
 
 use Rocket\Console\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 /**
  *  The Initialization command for Feley Framework
@@ -25,6 +27,7 @@ class InitCommand extends \netesy\Console\Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln("<error>I am a symfony/console error</error>");
+        $this->setCode = 1;
     }
 }
 ?>
