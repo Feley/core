@@ -1,8 +1,8 @@
 <?php 
 
 namespace Rocket\Console;
-use netesy\Console\Application;
-use netesy\Console\Command;
+use Rocket\Console\Application;
+use Rocket\Console\Command;
 
 /**
  * Initialize The Console
@@ -17,10 +17,10 @@ class Init
     {
         $directory = __DIR__.'/Commands/';
         $app = new Application('Speed Console', '1.0');
-        foreach (glob($directory."/*.php") as $file) {
-            require_once($file);
-        }
-        $app->add(new InitCommand());
+        // foreach (glob($directory."/*.php") as $file) {
+        //     require_once($file);
+        // }
+        $app->add(new Commands\InitCommand());
         $app->run();
     }
 

@@ -1,10 +1,9 @@
 <?php
 
-namespace Rocket\Console;
+namespace Rocket\Console\Commands;
 
-use netesy\Console\Command;
+use Rocket\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
-
 /**
  *  The Initialization command for Feley Framework
  *  @ author Emmanuel Olisah
@@ -13,7 +12,7 @@ use Symfony\Component\Console\Input\InputArgument;
  
 class InitCommand extends \netesy\Console\Command
 {
-    protected $commandName = "speed:init";
+    protected $commandName = "feley:init";
     protected $commandDescription = "Initialize Feley Framework";
     protected $commandArgumentName = "environment";
     protected $commandArgumentDescription = "Framework Environment";
