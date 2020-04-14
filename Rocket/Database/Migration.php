@@ -2,7 +2,7 @@
 
 namespace Rocket\Database;
 
-use Illumninate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 Class Migration extends Capsule
 {
