@@ -27,7 +27,7 @@ class InitCommand extends \netesy\Console\Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln("<error>I am a symfony/console error</error>");
-        $this->setCode = 1;
+        $this->setCode(1);
     }
 }
 ?>
