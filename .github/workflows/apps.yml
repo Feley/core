@@ -1,0 +1,11 @@
+- name: WIP
+  uses: wip/action@v1.0.0
+
+- name: Closes issues related to a merged pull request.
+  uses: ldez/gha-mjolnir@v1.0.0
+
+- name: Delete merged branch
+  uses: SvanBoxel/delete-merged-branch@v1.3.3
+
+- name: Analysis Publisher
+  uses: digirati-labs/analysis-publisher@0.0.1
