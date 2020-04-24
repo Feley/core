@@ -13,21 +13,19 @@ use Symfony\Component\Console\Input\InputArgument;
  * @version 0.0.5
  */
  
-class InitCommand extends \netesy\Console\Command
+class KeyCommand extends Command
 {
-    protected $commandName = "feley:init";
-    protected $commandDescription = "Initialize Feley Framework";
-    protected $commandArgumentName = "environment";
-    protected $commandArgumentDescription = "Framework Environment";
+    protected $commandName = "key:generate";
+    protected $commandDescription = "Set the application key";
 
     protected function configure()
     {
-        $this->setName($this->commandName)->setDescription($this->commandDescription)->addArgument($this->commandArgumentName, InputArgument::OPTIONAL, $this->commandArgumentDescription);
+        $this->setName($this->commandName)->setDescription($this->commandDescription);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("<error>Application successfully Initialized</error>");
+        $output->writeln("<success>Application key generated successfully</success>");
         $this->setCode(1);
     }
 }

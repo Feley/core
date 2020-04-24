@@ -7,8 +7,9 @@ use Rocket\Console\Command;
 /**
  * Initialize The Console
  * 
- * 
- * @author Emmanuel Olisah
+ * @author Emmnauel [netesy] Olisah
+ * @copyright 2020 Voom Framework
+ * @version 0.0.5
  */
 class Init 
 {
@@ -24,6 +25,7 @@ class Init
         //   // $app->add(new Commands\$file());
         // }
         $app->add(new Commands\InitCommand());
+        $app->add(new Commands\KeyCommand());
         $app->run();
     }
 

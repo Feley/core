@@ -1,13 +1,32 @@
 <?php
 namespace Rocket\Analytics;
+
+/**
+ * File for the analytics class
+ * 
+ * @package Rocket\Analytics\Fast
+ * @author Emmnauel [netesy] Olisah
+ * @copyright 2020 Voom Framework
+ * @version 0.0.5
+ * @todo get_location()
+ */
 class Fast{
-
-
-
+    /**
+     * Get the users agent.
+     * 
+     * Get the user agent
+     * @return string outputs the user agent.
+     */ 
     private static function get_user_agent() {
         return  $_SERVER['HTTP_USER_AGENT'];
     }
 
+    /**
+     * Get the users ip address.
+     * 
+     * Gets the users ip address
+     * @return string the user ips address or unknown ip
+     */ 
     public static function get_ip() {
         $mainIp = '';
         if (getenv('HTTP_CLIENT_IP'))
@@ -27,6 +46,12 @@ class Fast{
         return $mainIp;
     }
 
+    /**
+     * Get the users Operating System.
+     * 
+     * Get the users Operating system
+     * @return string the users operating system or unknown os.
+     */ 
     public static function get_os() {
 
         $user_agent = self::get_user_agent();
@@ -65,6 +90,12 @@ class Fast{
         return $os_platform;
     }
 
+    /**
+     * Get the users Browsers name.
+     * 
+     * Get the users browsers name.
+     * @return string the browsers name.
+     */ 
     public static function  get_browser() {
 
         $user_agent= self::get_user_agent();
@@ -98,6 +129,12 @@ class Fast{
 
     }
 
+    /**
+     * Get the users device name.
+     * 
+     * Get the users device's name.
+     * @return string indicates the device type of the user.
+     */ 
     public static function  get_device(){
 
         $tablet_browser = 0;
