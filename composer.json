@@ -1,6 +1,6 @@
 {
-    "name": "netesy/voom",
-    "description": "The Voom Framework",
+    "name": "feley/core",
+    "description": "The Reactive Framework for the fast",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -22,7 +22,7 @@
         "league/flysystem": "2.x-dev",
         "league/event": "^2.2@dev",
         "duncan3dc/sessions": "^1.2",
-        "league/container": "dev-master",
+        "league/container": "^3",
         "illuminate/database": "7.x-dev",
         "illuminate/queue": "7.x-dev",
         "nette/mail": "^3.1@dev",
