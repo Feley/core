@@ -17,6 +17,24 @@ class Fast{
      * Get the user agent
      * @return string outputs the user agent.
      */ 
+
+    private string $ipAddress;
+    private string $continent;
+    private string $country;
+    private string $region;
+    private string $city;
+    private string $longitude;
+    private string $latitude;
+    private string $timezone;
+    private string $currency;
+    private string $converter;
+
+
+    public __construct( $ip){
+        $this->ipAddress = $ip ?? self::get_ip();
+        self::set_geodata($this->ipAddress);
+    }
+
     private static function get_user_agent() {
         return  $_SERVER['HTTP_USER_AGENT'];
     }
@@ -43,7 +61,106 @@ class Fast{
             $mainIp = getenv('REMOTE_ADDR');
         else
             $mainIp = 'UNKNOWN';
+
+        $this->ipAddress = $mainIp;
         return $mainIp;
+    }
+
+    public static function set_geodata($ipAddress){
+      $data = json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ipAddress)); 
+        $this->continent = $data['geoplugin_continentName'];
+        $this->country = $data['geoplugin_countryName'];
+        $this->region = $data['geoplugin_regionName'];
+        $this->city = $data['geoplugin_city'];
+        $this->longitude = $data['geoplugin_longitude'];
+        $this->latitude= $data['geoplugin_latitude'];
+        $this->timezone = $data['geoplugin_timezone'];
+        $this->currency = $data['geoplugin_currencyCode'];
+        $this->converter = $data['geoplugin_currencyConverter'];
+    }
+
+   /**
+     * Get the users continent name.
+     * 
+     * Gets the users Continent Name
+     * @return string the user Continent name
+     */ 
+    public static function get_continent() {
+        return  $this->continent;
+    }   
+
+    /**
+     * Get the users country name.
+     * 
+     * Gets the users Country Name
+     * @return string the user Country name
+     */ 
+    public static function get_country() {
+        return  $this->country;
+    }  
+     
+     /**
+     * Get the users region/state name.
+     * 
+     * Gets the users Region/State Name
+     * @return string the user region/state name
+     */ 
+    public static function get_region() {
+        return  $this->region;
+    }   
+    /**
+     * Get the users city name.
+     * 
+     * Gets the users City Name
+     * @return string the user City name
+     */ 
+    public static function get_city() {
+        return  $this->city;
+    }   
+    /**
+     * Get the users longitude.
+     * 
+     * Gets the users longitude
+     * @return string the user longitude
+     */ 
+    public static function get_longitude() {
+        return  $this->longitude;
+    }
+    /**
+     * Get the users latitude.
+     * 
+     * Gets the users latitude
+     * @return string the user latitude
+     */ 
+    public static function get_latitude() {
+        return  $this->latitude;
+    }   
+    /**
+     * Get the users timezone.
+     * 
+     * Gets the users timezone
+     * @return string the user timezone
+     */ 
+    public static function get_timezone() {
+        return  $this->timezone;
+    }  
+    /**
+     * Get the users currency code.
+     * 
+     * Gets the users currency
+     * @return string the user currency code
+     */ 
+    public static function get_currency() {
+        return  $this->currency;
+    }
+    /**
+     * Get the users currency converted against usd.
+     * 
+     * Gets the users currency converted against USD
+     * @return string the user currency converted versus USD
+     */ 
+    public static function get_converter() {
+        return  $this->converter;
     }
 
     /**
