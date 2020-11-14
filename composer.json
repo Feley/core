@@ -14,7 +14,6 @@
 		"php": "^7.2",
         "pimple/pimple": "^3.0",
         "davedevelopment/phpmig": "^1.6",
-		"eftec/bladeone": "^3.37",
 		"symfony/http-foundation": "*",
         "vlucas/phpdotenv": "^4.1@dev",
         "filp/whoops": "^2.6@dev",
@@ -32,10 +31,10 @@
 	},    
 	"autoload": {
 		"files": [
-			"Rocket/Support/helper.php"
+			"Dogoda/Support/helper.php"
 		],
         "psr-4": {
-            "Rocket\\": "Rocket/"
+            "Dogoda\\": "Dogoda/"
         }
     }
 }
