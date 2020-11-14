@@ -1,0 +1,19 @@
+{
+    "name": "dogoda/analytics",
+    "description": "standalone analytics package for feley framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Netesy Emmanuel",
+            "email": "netesy1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload":
+    {
+        "psr-4": { "Dogoda\\Analytics\\": "" }
+    }
+}
